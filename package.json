@@ -1,6 +1,6 @@
 {
-  "name": "gatsby-starter-typescript",
-  "description": "Gatsby TypeScript starter",
+  "name": "jusarang-adm-app",
+  "description": "Jusarang Admin App",
   "version": "1.0.0",
   "dependencies": {
     "@storybook/addon-actions": "^3.4.4",
