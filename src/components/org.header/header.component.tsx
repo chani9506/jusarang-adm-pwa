@@ -5,10 +5,8 @@ import { H1 } from '../atm.typography';
 
 export const Header = () => (
   <HeaderStyled>
-    <div
-      style={{padding: '16px'}}
-    >
+    <HeaderStyled>
       <Link to='/'><H1>Jusarang</H1></Link>
-    </div>
+    </HeaderStyled>
   </HeaderStyled>
 )
