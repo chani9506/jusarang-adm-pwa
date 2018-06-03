@@ -16,3 +16,10 @@ export const H2 = styled.h2`
   font-weight: ${FontWeight.Normal};
   font-size: ${FontSize.Large};
 `;
+
+export const Body = styled.p`
+  color: ${Color.Black};
+  font-family: ${FontFamily.Primary};
+  font-weight: ${FontWeight.Normal};
+  font-size: ${FontSize.Medium};
+`;
