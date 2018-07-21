@@ -42,8 +42,7 @@
   "license": "MIT",
   "main": "n/a",
   "scripts": {
-    "start": "gatsby build && gatsby serve",
-    "server": "gatsby build && gatsby develop",
+    "start": "gatsby build && gatsby develop",
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --parser typescript --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.ts*\"",
