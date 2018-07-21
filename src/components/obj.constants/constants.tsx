@@ -1,5 +1,6 @@
 enum BrandColor {
   Purple = '#663399',
+  Orange = 'orange',
 }
 
 enum GrayScale {
@@ -9,7 +10,7 @@ enum GrayScale {
 
 export class Color {
   public static readonly Primary = BrandColor.Purple;
-
+  public static readonly Secondary = BrandColor.Orange;
   public static readonly Black = GrayScale.Black;
   public static readonly White = GrayScale.White;
 }
