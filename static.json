@@ -1,5 +1,6 @@
 {
-  "root": "public/",
+  "root": "public",
+  "clean_urls": false,
   "headers": {
     "/**.js": {
       "Cache-Control": "public, max-age=0, must-revalidate"
