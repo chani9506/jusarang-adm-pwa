@@ -1,6 +1,6 @@
 {
-  "name": "gatsby-starter-typescript",
-  "description": "Gatsby TypeScript starter",
+  "name": "jusarang-adm-app",
+  "description": "Jusarang Admin App",
   "version": "1.0.0",
   "dependencies": {
     "@storybook/addon-actions": "^3.4.4",
@@ -48,7 +48,8 @@
     "format": "prettier --parser typescript --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.ts*\"",
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "start-storybook -p 9001 -c .storybook",
-    "storybook:build": "build-storybook -c .storybook -o public/docs"
+    "storybook:build": "build-storybook -c .storybook -o public/docs",
+    "heroku-postbuild": "gatsby build"
   },
   "devDependencies": {
     "prettier": "^1.8.2"
