@@ -1,15 +1,39 @@
 import * as React from 'react';
-import { ButtonStyled } from './button.component.style';
+import { ButtonStyled, LinkButtonStyled } from './button.component.style';
+
+export type ButtonType = 'primary' | 'secondary' | 'callToAction' | 'link' | 'alert';
 
 export interface ButtonProps {
-  onClick: () => void;
-  kind?: 'primary' | 'secondary';
+  onClick?: () => void;
+  btnkind?: ButtonType;
+  outlined?: boolean;
+  to?: string | object;
 }
 
 export class Button extends React.Component<ButtonProps, undefined> {
+  static defaultProps = {
+    btnkind: 'primary',
+    outlined: false,
+  };
+
   render() {
     return (
-      <ButtonStyled kind={this.props.kind} onClick={this.props.onClick}>{this.props.children}</ButtonStyled>
+      <>
+        {this.props.to ? (
+          <LinkButtonStyled
+            to={this.props.to}
+            {...this.props}
+          >
+            {this.props.children}
+          </LinkButtonStyled>
+        ) : (
+          <ButtonStyled
+           {...this.props}
+          >
+            {this.props.children}
+          </ButtonStyled>
+        )}
+      </>
     );
   }
 }

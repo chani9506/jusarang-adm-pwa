@@ -1,15 +1,13 @@
 import * as React from 'react';
 import { addDecorator, configure } from '@storybook/react';
 import { BrowserRouter } from 'react-router-dom';
-import { injectGlobals } from '../src/components';
+import { withKnobs } from '@storybook/addon-knobs';
 
-const req = require.context('../src/components', true, /.story.tsx$/);
+const req = require.context('../src/components', true, /\.story\.tsx$/);
 
 function loadStories() {
   req.keys().forEach(req);
 }
-
-injectGlobals();
 
 addDecorator(story => {
   return (
@@ -18,5 +16,7 @@ addDecorator(story => {
     </BrowserRouter>
   );
 });
+
+addDecorator(withKnobs);
 
 configure(loadStories, module);
